@@ -60,8 +60,8 @@ jobs:
 
       - name: Push Docker Image to Docker Hub
         run: |
+          docker push ${{ env.DOCKER_REPO }}/${{ env.ANIMAL }}:$BUILD_TAG &&
           docker push ${{ env.DOCKER_REPO }}/${{ env.ANIMAL }}:latest
-          docker push ${{ env.DOCKER_REPO }}/${{ env.ANIMAL }}:$BUILD_TAG
 
       - name: Save New Docker Build Number to GitHub Secret
         run: |
@@ -69,6 +69,6 @@ jobs:
           echo "New Docker Build Number: $NEW_BUILD_TAG"
           curl -X PATCH -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
                -H "Accept: application/vnd.github.v3+json" \
-               https://api.github.com/repos/${{ github.repository }}/actions/secrets/DOCKER_HUB_BUILD_NUMBER \
+               https://api.github.com/repos/${{ github.repository }}/actions/variables/DOCKER_HUB_BUILD_NUMBER \
                -d "{\"encrypted_value\":\"$NEW_BUILD_TAG\"}"
 
