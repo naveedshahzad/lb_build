@@ -19,6 +19,27 @@ jobs:
       - name: Set Animal Variable (Branch Name)
         run: echo "ANIMAL=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
 
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          repository: "livebinders/livebinders"  # Replace with the actual repo
+          ref: ${{ env.ANIMAL }}
+          path: "this_repo"
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7.5
+          bundler-cache: true  # Runs `bundle install` automatically
+
+      - name: Verify Ruby and Bundler versions
+        run: |
+          ruby -v
+          bundler -v
+
+      - name: Run script
+        run: bundle exec ruby this_repo/scripts/find_or_create_and_merge_pr.rb
+
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
