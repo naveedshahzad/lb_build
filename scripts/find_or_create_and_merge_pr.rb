@@ -56,8 +56,9 @@ end
 
 #reset base branch to latest rails5
 puts "Resetting #{base_branch} to latest rails5"
-prj_dir = "#{ENV['HOME']}/projects/lb_deploy"
-util_dir = "#{ENV['HOME']}/projects/utilities"
+exec_cmd("echo $PWD")
+exec_cmd("echo WorkingDirectory")
+prj_dir = "."
 exec_cmd("cd #{prj_dir} && git fetch bb rails5")
 exec_cmd("cd #{prj_dir} && git checkout rails5")
 exec_cmd("cd #{prj_dir} && git branch -D #{base_branch}")
@@ -65,6 +66,7 @@ exec_cmd("cd #{prj_dir} && git branch -rd origin/#{base_branch}")
 exec_cmd("cd #{prj_dir} && git branch -rd bb/#{base_branch}")
 exec_cmd("cd #{prj_dir} && git checkout -b #{base_branch}")
 exec_cmd("cd #{prj_dir} && git push -f bb #{base_branch}")
+raise "incompolete"
 
 
 puts "Merging the deployment PR"
