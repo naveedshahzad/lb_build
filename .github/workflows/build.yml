@@ -43,7 +43,7 @@ jobs:
         working-directory: this_repo
         env:
           BB_USERNAME: ${{ vars.BB_USERNAME }} # Read from GitHub Vars
-          BB_PASSWORD: ${{ secrets.BB_USERNAME }} # Read from GitHub Secrets
+          BB_PASSWORD: ${{ secrets.BB_PASSWORD }} # Read from GitHub Secrets
 
       - name: Checkout Repository
         uses: actions/checkout@v4
