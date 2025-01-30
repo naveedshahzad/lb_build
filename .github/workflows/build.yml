@@ -29,7 +29,6 @@ jobs:
         with:
           ruby-version: 2.7.5
           bundler-cache: true  # Runs `bundle install` automatically
-        working-directory: this_repo
 
       - name: Verify Ruby and Bundler versions
         run: |
