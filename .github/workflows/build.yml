@@ -29,14 +29,17 @@ jobs:
         with:
           ruby-version: 2.7.5
           bundler-cache: true  # Runs `bundle install` automatically
+        working-directory: this_repo
 
       - name: Verify Ruby and Bundler versions
         run: |
           ruby -v
           bundler -v
+        working-directory: this_repo
 
       - name: Run script
-        run: bundle exec ruby this_repo/scripts/find_or_create_and_merge_pr.rb
+        run: bundle exec ruby scripts/find_or_create_and_merge_pr.rb
+        working-directory: this_repo
 
       - name: Checkout Repository
         uses: actions/checkout@v4
