@@ -60,9 +60,11 @@ jobs:
         run: |
           echo "GIT_COMMIT=$(git rev-parse HEAD)" >> $GITHUB_ENV
           echo "GIT_BRANCH=$(git rev-parse --abbrev-ref HEAD)" >> $GITHUB_ENV
+        working-directory: lb_code
 
       - name: Read Docker Hub Build Number
         run: echo "BUILD_TAG=${{ env.DOCKER_HUB_BUILD_NUMBER }}" >> $GITHUB_ENV
+        working-directory: lb_code
 
       - name: Generate build.yml
         run: |
@@ -71,26 +73,31 @@ jobs:
           echo "GIT_BRANCH: $GIT_BRANCH" >> build.yml
           echo "BUILD_TAG: $BUILD_TAG" >> build.yml
           cat build.yml
+        working-directory: lb_code
 
       - name: Increment Docker Build Number
         run: echo "$((BUILD_TAG + 1))" > docker_hub_build_number.txt
+        working-directory: lb_code
 
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
           username: ${{ vars.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
+        working-directory: lb_code
 
       - name: Build Docker Image
         run: |
           docker build --file=./Dockerfile.lbapp \
             --tag=${{ env.DOCKER_REPO }}/${{ env.ANIMAL }}:latest \
             --tag=${{ env.DOCKER_REPO }}/${{ env.ANIMAL }}:$BUILD_TAG .
+        working-directory: lb_code
 
       - name: Push Docker Image to Docker Hub
         run: |
           docker push ${{ env.DOCKER_REPO }}/${{ env.ANIMAL }}:$BUILD_TAG
           docker push ${{ env.DOCKER_REPO }}/${{ env.ANIMAL }}:latest
+        working-directory: lb_code
 
       - name: Save New Docker Build Number to GitHub Secret
         run: |
@@ -100,4 +107,5 @@ jobs:
                -H "Accept: application/vnd.github.v3+json" \
                https://api.github.com/repos/${{ github.repository }}/actions/variables/DOCKER_HUB_BUILD_NUMBER \
                -d "{\"encrypted_value\":\"$NEW_BUILD_TAG\"}"
+        working-directory: lb_code
 
