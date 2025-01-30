@@ -29,6 +29,8 @@ jobs:
         with:
           ruby-version: 2.7.5
           bundler-cache: true  # Runs `bundle install` automatically
+        env:
+          BUNDLE_GEMFILE: this_repo/Gemfile
 
       - name: Verify Ruby and Bundler versions
         run: |
