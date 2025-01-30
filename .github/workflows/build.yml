@@ -43,7 +43,7 @@ jobs:
         with:
           repository: "livebinders/livebinders"  # Replace with the actual repo
           ref: ${{ env.ANIMAL }}
-          path: "lb_code"
+          path: "."
           token: ${{ secrets.PAT_TOKEN }}  # Required for private repos
 
       - name: Run script
