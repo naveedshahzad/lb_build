@@ -63,7 +63,9 @@ exec_cmd("cd .. && ls")
 puts " Further Previous dir"
 exec_cmd("cd ../../ && ls")
 exec_cmd("echo WorkingDirectory")
-prj_dir = ".."
+prj_dir = "../lb_code"
+exec_cmd("cd #{prj_dir} && git remote add bb https://#{bb_username}:#{bb_app_token}@bitbucket.org/naveedshehzad/livebinders.git")
+#exec_cmd("cd #{prj_dir} && git remote set-url origin https://naveedshahzad:#{ENV["PAT_TOKEN"]}@github.com/Livebinders/Livebinders.git")
 exec_cmd("cd #{prj_dir} && git fetch bb rails5")
 exec_cmd("cd #{prj_dir} && git checkout rails5")
 exec_cmd("cd #{prj_dir} && git branch -D #{base_branch}")
@@ -89,7 +91,7 @@ puts "deploying to the #{base_branch}"
 exec_cmd("cd #{prj_dir} && git checkout #{base_branch}")
 exec_cmd("cd #{prj_dir} && git pull bb #{base_branch}")
 
-exec_cmd("cd #{prj_dir} && git push -f origin #{base_branch}")
+#exec_cmd("cd #{prj_dir} && git push -f origin #{base_branch}")
 
 puts "Completed"
 

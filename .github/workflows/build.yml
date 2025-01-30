@@ -45,6 +45,8 @@ jobs:
           ref: ${{ env.ANIMAL }}
           path: "lb_code"
           token: ${{ secrets.PAT_TOKEN }}  # Required for private repos
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
 
       - name: Run script
         run: |
