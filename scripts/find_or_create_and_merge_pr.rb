@@ -58,7 +58,10 @@ end
 puts "Resetting #{base_branch} to latest rails5"
 exec_cmd("echo $PWD")
 exec_cmd("ls")
+puts "Previous dir"
 exec_cmd("cd .. && ls")
+puts " Further Previous dir"
+exec_cmd("cd ../../ && ls")
 exec_cmd("echo WorkingDirectory")
 prj_dir = ".."
 exec_cmd("cd #{prj_dir} && git fetch bb rails5")
