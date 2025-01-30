@@ -9,7 +9,7 @@ IO.popen(cmd) do |io|
 end
 end
 
-puts " Rading sourch branch from #{"code_dir/source_branch")}"
+puts " Rading sourch branch from #{"code_dir/source_branch"} "
 feature_branch = File.read("code_dir/source_branch.txt")
 base_branch    = ENV["ANIMAL"]
 if feature_branch.nil?
