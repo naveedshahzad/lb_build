@@ -57,8 +57,10 @@ end
 #reset base branch to latest rails5
 puts "Resetting #{base_branch} to latest rails5"
 exec_cmd("echo $PWD")
+exec_cmd("ls")
+exec_cmd("cd .. && ls")
 exec_cmd("echo WorkingDirectory")
-prj_dir = "."
+prj_dir = ".."
 exec_cmd("cd #{prj_dir} && git fetch bb rails5")
 exec_cmd("cd #{prj_dir} && git checkout rails5")
 exec_cmd("cd #{prj_dir} && git branch -D #{base_branch}")
