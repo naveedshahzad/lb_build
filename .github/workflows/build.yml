@@ -84,7 +84,6 @@ jobs:
         with:
           username: ${{ vars.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-        working-directory: lb_code
 
       - name: Build Docker Image
         run: |
