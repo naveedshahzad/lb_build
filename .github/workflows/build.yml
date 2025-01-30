@@ -52,7 +52,6 @@ jobs:
           ls
           echo Previous
           ls ../
-          bundle exec ruby this_repo/scripts/find_or_create_and_merge_pr.rb
         env:
           BB_USERNAME: ${{ vars.BB_USERNAME }} # Read from GitHub Vars
           BB_PASSWORD: ${{ secrets.BB_PASSWORD }} # Read from GitHub Secrets
