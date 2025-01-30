@@ -30,7 +30,8 @@ conn = Faraday.new(url: bb_host_url, headers: {'Content-Type' => 'application/js
 conn.basic_auth(bb_username, bb_app_token)
 bb_prs_resp = conn.get(bb_prs_url)
 
-puts bb_prs_resp.body
+puts bb_prs_resp.inspect
+exec_cmd(`echo #{bb_prs_resp.inspect}`)
 bb_prs = JSON.parse(bb_prs_resp.body)["values"]
 bb_pr = bb_prs.select{|bb_pr| bb_pr["source"]["branch"]["name"] == feature_branch && bb_pr["destination"]["branch"]["name"]==base_branch}.first
 if bb_pr.nil?
