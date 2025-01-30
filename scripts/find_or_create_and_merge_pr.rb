@@ -77,6 +77,7 @@ data = {
   "type":""
 }
 bb_merge_pr_resp = conn.post(bb_merge_url, data.to_json)
+puts bb_merge_pr_resp.body
 
 #deploying to the base branch
 puts "deploying to the #{base_branch}"
