@@ -38,13 +38,6 @@ jobs:
           bundler -v
         working-directory: this_repo
 
-      - name: Run script
-        run: bundle exec ruby scripts/find_or_create_and_merge_pr.rb
-        working-directory: this_repo
-        env:
-          BB_USERNAME: ${{ vars.BB_USERNAME }} # Read from GitHub Vars
-          BB_PASSWORD: ${{ secrets.BB_PASSWORD }} # Read from GitHub Secrets
-
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
@@ -52,6 +45,12 @@ jobs:
           ref: ${{ env.ANIMAL }}
           path: "."
           token: ${{ secrets.PAT_TOKEN }}  # Required for private repos
+
+      - name: Run script
+        run: bundle exec ruby this_repo/scripts/find_or_create_and_merge_pr.rb
+        env:
+          BB_USERNAME: ${{ vars.BB_USERNAME }} # Read from GitHub Vars
+          BB_PASSWORD: ${{ secrets.BB_PASSWORD }} # Read from GitHub Secrets
 
       - name: Set Git Commit and Branch
         run: |
