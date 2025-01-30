@@ -48,9 +48,9 @@ jobs:
 
       - name: Run script
         run: |
-          echo $PWD\
-          ls\
-          echo Previous\
+          echo $PWD
+          ls
+          echo Previous
           ls ../
         env:
           BB_USERNAME: ${{ vars.BB_USERNAME }} # Read from GitHub Vars
