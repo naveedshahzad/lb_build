@@ -43,7 +43,7 @@ jobs:
         with:
           repository: "livebinders/livebinders"  # Replace with the actual repo
           ref: ${{ env.ANIMAL }}
-          path: "."
+          path: "lb_code"
           token: ${{ secrets.PAT_TOKEN }}  # Required for private repos
 
       - name: Run script
@@ -51,7 +51,7 @@ jobs:
           echo $PWD
           ls
           echo Previous
-          ls ../
+          ls ../lb_code
         env:
           BB_USERNAME: ${{ vars.BB_USERNAME }} # Read from GitHub Vars
           BB_PASSWORD: ${{ secrets.BB_PASSWORD }} # Read from GitHub Secrets
