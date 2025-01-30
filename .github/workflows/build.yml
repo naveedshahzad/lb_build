@@ -9,7 +9,7 @@ on:
 
 env:
   DOCKER_REPO: docker.io/livebinders
-  DOCKER_HUB_BUILD_NUMBER: ${{ vars.DOCKER_HUB_BUILD_NUMBER }} # Read from GitHub Secrets
+  DOCKER_HUB_BUILD_NUMBER: ${{ vars.DOCKER_HUB_BUILD_NUMBER }} # Read from GitHub Vars
 
 jobs:
   build:
@@ -41,6 +41,9 @@ jobs:
       - name: Run script
         run: bundle exec ruby scripts/find_or_create_and_merge_pr.rb
         working-directory: this_repo
+        env:
+          BB_USERNAME: ${{ vars.BB_USERNAME }} # Read from GitHub Vars
+          BB_PASSWORD: ${{ secrets.BB_USERNAME }} # Read from GitHub Secrets
 
       - name: Checkout Repository
         uses: actions/checkout@v4

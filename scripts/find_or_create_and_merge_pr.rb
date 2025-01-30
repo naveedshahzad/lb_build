@@ -10,13 +10,13 @@ end
 end
 
 puts " Rading sourch branch from #{"code_dir/source_branch"} "
-feature_branch = File.read("code_dir/source_branch.txt")
-base_branch    = ENV["ANIMAL"]
-if feature_branch.nil?
+feature_branch = File.read("code_dir/source_branch.txt")&.strip
+base_branch    = ENV["ANIMAL"]&.strip
+if feature_branch.nil? || feature_branch.length == 0
   puts "Feature branch is not specified"
   raise "Feature branch is not specified"
 end
-if base_branch.nil?
+if base_branch.nil? || base_branch.length == 0
   puts "Base branch is not specified"
   raise "Base branch is not specified"
 end
