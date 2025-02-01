@@ -1,1 +1,1 @@
-features/1333-1-new-requirements
+1395-change-authorname-caption-on-profile
