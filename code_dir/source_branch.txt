@@ -1,1 +1,1 @@
-features/1341-error-updating-binder-name
+ features/1341-error-updating-binder-name
