@@ -1,1 +1,1 @@
-features/1361-binder-name-in-player-url 
+features/1341-error-updating-binder-name
