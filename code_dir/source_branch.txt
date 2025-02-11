@@ -1,1 +1,1 @@
-features/stripe-integration
+features/1159-collaboration-email-option
