@@ -1,1 +1,1 @@
-features/1300-invalid-character-in-email-address
+features/1159-collaboration-email-option
