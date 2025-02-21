@@ -1,1 +1,1 @@
- features/1341-error-updating-binder-name
+fix/1402-1-author-name-issues
