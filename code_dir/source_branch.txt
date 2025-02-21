@@ -1,1 +1,1 @@
-features/1159-collaboration-email-option
+bug/profile-upload-aspect-ratio
