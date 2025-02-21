@@ -1,1 +1,1 @@
-bug/profile-upload-aspect-ratio
+features/1386-purge-cancelled-accounts
