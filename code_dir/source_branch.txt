@@ -1,1 +1,1 @@
-fix/1402-1-author-name-issues
+features/1159-collaboration-email-option
