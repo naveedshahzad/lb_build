@@ -1,1 +1,1 @@
-features/1388-cancel-account-report
+features/1300-invalid-character-in-email-address
