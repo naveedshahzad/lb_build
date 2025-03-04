@@ -1,1 +1,1 @@
-bug/247-shelf-deletion-exception
+features/carousel-select-tab
