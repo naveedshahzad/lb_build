@@ -1,1 +1,1 @@
-features/1369-offline-version-issue
+features/1415-upgrade-page-configuration-lbi-admin-v1
