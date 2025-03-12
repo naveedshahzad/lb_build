@@ -1,1 +1,1 @@
-features/1243-make-thumbnails-viewable
+features/1420-new-tab-indicator
