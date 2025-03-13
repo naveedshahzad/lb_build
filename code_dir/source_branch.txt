@@ -1,1 +1,1 @@
-bugs/tab-name-apostrophe
+features/1424-change-redirect-link
