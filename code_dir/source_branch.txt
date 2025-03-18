@@ -1,1 +1,1 @@
-features/1415-upgrade-page-configuration-lbi-admin-v1
+features/1415-upgrade-page-configuration-lbi-admin-v1 
