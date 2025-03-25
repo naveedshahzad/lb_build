@@ -1,1 +1,1 @@
-bug/1432-table-of-contents
+features/1422-extend-image-insert-functionality
