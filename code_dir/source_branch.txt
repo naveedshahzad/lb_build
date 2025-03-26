@@ -1,1 +1,1 @@
-bug/1411-member-added-in-organization
+features/1420-new-tab-indicator
