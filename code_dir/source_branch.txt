@@ -1,1 +1,1 @@
-features/1445-drop-down-font-change 
+features/1445-drop-down-font-change
