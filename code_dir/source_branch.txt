@@ -1,1 +1,1 @@
-features/1441-lbi-admin-utility
+features/1380-changes-in-emails
