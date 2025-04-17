@@ -1,1 +1,1 @@
-features/1443-change-font-color-and-size
+features/1380-changes-in-emails
