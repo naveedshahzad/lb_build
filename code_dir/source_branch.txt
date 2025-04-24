@@ -1,1 +1,1 @@
-features/1438-profile-pic-improvements 
+bugs/1476-make-renew-upgrade-links-to-work
