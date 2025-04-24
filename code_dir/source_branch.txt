@@ -1,1 +1,1 @@
-features/1438-profile-pic-improvements
+features/1478-improvments-emails
