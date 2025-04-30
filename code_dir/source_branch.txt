@@ -1,1 +1,1 @@
-features/1288-delete-account-adjustments 
+features/926-multifactor-link-in-learn-more-on-profile-page
