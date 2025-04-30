@@ -1,1 +1,1 @@
-features/926-multifactor-link-in-learn-more-on-profile-page
+bug/1411-member-added-in-organization
