@@ -1,1 +1,1 @@
-features/1420-new-tab-indicator
+fix/1439-subtab-color
