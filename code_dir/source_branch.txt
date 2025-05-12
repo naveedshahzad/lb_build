@@ -1,1 +1,1 @@
-features/1490-lbi-admin-role
+features/1420-new-tab-indicator
