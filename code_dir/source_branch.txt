@@ -1,1 +1,1 @@
-features/1420-new-tab-indicator
+features/1503-fix-featured-shelf-ui
