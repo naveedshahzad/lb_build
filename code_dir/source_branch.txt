@@ -1,1 +1,1 @@
-bug/1501-featured-shelves-binders
+features/1503-fix-featured-shelf-ui
