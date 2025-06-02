@@ -1,1 +1,1 @@
-bug/1501-featured-shelves-binders
+1523-copy-tab-media-association-fix
