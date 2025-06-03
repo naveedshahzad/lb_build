@@ -1,1 +1,1 @@
-features/1522-offline-version-filenames
+features/1524-sensitive-pages-security
