@@ -1,1 +1,1 @@
-features/1525-binder-cover-issues
+features/1524-sensitive-pages-security
