@@ -1,1 +1,1 @@
-features/1529-utility-permission
+features/1524-sensitive-pages-security
