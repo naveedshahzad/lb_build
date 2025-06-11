@@ -1,1 +1,1 @@
-features/1519-search-in-players  
+features/1519-search-in-players
