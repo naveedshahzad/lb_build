@@ -1,1 +1,1 @@
-features/1534-remove-name
+features/1532-customer-redirect-pop-up
