@@ -1,1 +1,1 @@
-features/1526-tab-name-password-issue
+features/1532-customer-redirect-pop-up
