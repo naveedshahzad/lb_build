@@ -1,1 +1,1 @@
-features/900-canva-embed-code
+features/stripe-integration
