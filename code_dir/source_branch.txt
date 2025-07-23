@@ -1,1 +1,1 @@
-1550-message-for-looping-binder
+1560-bulk-detached-feature
