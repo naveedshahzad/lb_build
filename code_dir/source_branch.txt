@@ -1,1 +1,1 @@
-1560-bulk-detached-feature
+1562-next-live-links-same-binder-handling
