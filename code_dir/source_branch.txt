@@ -1,1 +1,1 @@
-1563-toc-main-tabs-bolder
+1563-toc-bold-tab-fix
