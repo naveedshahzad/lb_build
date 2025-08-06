@@ -1,1 +1,1 @@
-1560-bulk-detached-feature
+1571-copy-tab-to-binder
