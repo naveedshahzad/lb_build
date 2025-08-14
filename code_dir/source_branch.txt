@@ -1,1 +1,1 @@
-features/stripe-integration 
+bulk-detach-super-admin
