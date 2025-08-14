@@ -1,1 +1,1 @@
-1575-toc-and-search-in-binder-player-issues
+1564-bug-with-binder-cover-html-in-link
