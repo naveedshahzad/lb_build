@@ -1,1 +1,1 @@
-features/1421-upgrade-page-ui-change
+features/stripe-integration
