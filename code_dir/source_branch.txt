@@ -1,1 +1,1 @@
-1582-pop-up-message-for-copy-tabs
+1580-team-detached-accounts
