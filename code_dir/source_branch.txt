@@ -1,1 +1,1 @@
-1580-team-detached-accounts
+1573-bug-with-details-link
