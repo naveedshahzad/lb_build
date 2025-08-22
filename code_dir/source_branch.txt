@@ -1,1 +1,1 @@
-1582-pop-up-message-for-copy-tabs
+features/stripe-integration
