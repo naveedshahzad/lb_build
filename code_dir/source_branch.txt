@@ -1,1 +1,1 @@
-1573-bug-with-details-link
+1587-featured-page-filter-changes
