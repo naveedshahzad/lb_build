@@ -1,1 +1,1 @@
-1559-email-confirmation-flow
+1592-invalid-emails-for-signup
