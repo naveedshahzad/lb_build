@@ -1,1 +1,1 @@
-1559-email-confirmation-flow 
+1554-bulk-delete-button
