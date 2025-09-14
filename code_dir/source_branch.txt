@@ -1,1 +1,1 @@
-1580-team-detached-accounts
+1603-stickiness-check-enhancement
