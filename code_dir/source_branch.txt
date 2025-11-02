@@ -1,1 +1,1 @@
-snapshot-download-issue
+1642-improve-upgrade-page-messaging
