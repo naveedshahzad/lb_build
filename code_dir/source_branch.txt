@@ -1,1 +1,1 @@
-1644-fix-binder-author-search-reindexing 
+1664-remove-stripe-functionality
