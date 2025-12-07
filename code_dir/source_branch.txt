@@ -1,1 +1,1 @@
-1544-stripe-invoice-details-and-profile-fix
+1544-stripe-invoice-details-and-profile-fix 
