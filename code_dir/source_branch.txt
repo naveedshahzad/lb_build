@@ -1,1 +1,1 @@
-1544-ui-bug-fixes 
+1544-remove-stripe-reference-from-cancellation-email
