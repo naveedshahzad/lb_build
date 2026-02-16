@@ -85,7 +85,12 @@ jobs:
           username: ${{ vars.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
+      - name: Use legacy Docker builder
+        run: docker buildx use default --driver-opt image=moby/buildkit:v0.10.6
+
       - name: Build Docker Image
+        env:
+          DOCKER_BUILDKIT: 0
         run: |
           docker build --file=./Dockerfile.lbapp \
             --tag=${{ env.DOCKER_REPO }}/${{ env.ANIMAL }}:latest \
