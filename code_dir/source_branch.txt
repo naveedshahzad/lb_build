@@ -1,1 +1,1 @@
-1700/configurable-default-payment-method 
+1700/configurable-default-payment-method
