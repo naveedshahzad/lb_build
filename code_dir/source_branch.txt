@@ -1,1 +1,1 @@
-1620/add-binder-id-to-cover-url 
+1620/filetree-copy-url-button
